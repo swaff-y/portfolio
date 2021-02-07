@@ -1,0 +1,18 @@
+.sidebar{
+  display: flex;
+  flex-direction: column;
+  flex: 0.35;
+  background-color: rgba(240, 242, 245,1);
+  justify-content: space-between;
+  padding: 20px;
+  padding-left: 40px;
+  border: 1px solid red;
+  text-align: center;
+  height: 95vh;
+  overflow: scroll;
+}
+
+.sidebar__img{
+  border-radius: 50%;
+  border: 1px solid lightgray;
+}
