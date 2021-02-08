@@ -6,7 +6,7 @@
   justify-content: space-between;
   padding: 20px;
   padding-left: 40px;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   text-align: center;
   height: 95vh;
   overflow: scroll;
@@ -16,3 +16,30 @@
   border-radius: 50%;
   border: 1px solid lightgray;
 }
+
+ul{
+  list-style:none;
+}
+ul,li{
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar__header{
+  /* display: flex; */
+  text-align: right;
+  /* justify-content: space-between; */
+  /* min-width: 10vw; */
+}
+
+.sidebar__social{
+  margin-top: 20px;
+}
+.sidebar__social > li{
+  margin-top: 10px;
+}
+
+/* .sidebar__header > .MuiSvgIcon-root {
+  margin-right: 2vw;
+  font-size: 24px !important;
+} */
