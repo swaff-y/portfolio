@@ -6,7 +6,7 @@ const About = (props) => {
     <div className="about" id="about">
       <div className="about__paragraph">
         <h1>Who am I?</h1>
-        <p>I have a strong passion for software engineering, and a great deal of experience interval project management. I enjoy the results of what can be achieved when thinking about software development problems collectively. My aptitude for analysing code based problems, helps me think about solutions from a unique perspective. As a collaborative and communicative team member, I help build operational teams while cultivating meaningful relationships.</p>
+        <p>I have a strong passion for software engineering, and a great deal of experience in project management. I enjoy the results of what can be achieved when thinking about software development problems collectively. My aptitude for analysing code based problems, helps me think about solutions from a unique perspective. As a collaborative and communicative team member, I help build operational teams while cultivating meaningful relationships.</p>
       </div>
       <div className="about__tech">
         <h1>Technologies I use</h1>

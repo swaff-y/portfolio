@@ -8,6 +8,7 @@ import Timeline from './components/Timeline';
 import Projects from './components/Projects';
 import { Route, HashRouter as Router } from 'react-router-dom';
 
+
 function App() {
   return (
     <div className="app">

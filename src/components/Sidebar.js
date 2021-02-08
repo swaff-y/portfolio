@@ -21,7 +21,7 @@ const Sidebar = (props) => {
           <h1>Kyle Swaffield</h1>
           <Button >
             <MailOutline />
-            <p>kyle@swaff.id.au</p>
+            kyle@swaff.id.au
           </Button>
           <ul>
             <li>
