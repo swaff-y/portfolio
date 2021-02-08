@@ -1,0 +1,21 @@
+.about{
+  background-image: url("https://res.cloudinary.com/dhl1cdqch/image/upload/v1612766759/usb-technology-wallpaper-preview_ksegsn.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  width: 80vw;
+  height: 100vh;
+}
+
+.about__paragraph{
+  position: relative;
+  width: 50vw;
+  height: 35vh;
+  margin: 50px;
+  overflow: scroll;
+}
+.about__tech{
+  position: relative;
+  width: 50vw;
+  height: 30vh;
+  margin: 50px;
+}

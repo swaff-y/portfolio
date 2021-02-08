@@ -1,10 +1,11 @@
 import React, {useEffect, useState} from 'react';
+import "./introduction.css";
 
 const Introduction = (props) => {
   return(
-    <>
-      <h1>Introduction</h1>
-    </>
+    <div className="introduction" id="introduction">
+      
+    </div>
   )
 }
 

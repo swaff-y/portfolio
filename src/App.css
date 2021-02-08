@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
 /* .App {
   text-align: center;
 }
@@ -40,9 +42,11 @@
 .app{
   display: grid;
   grid-template-columns: 300px auto;
-  place-items: center;
+  justify-content: start;
+  /* place-items: center; */
   /* height: 100vh; */
   background-color: rgba(255, 255, 255,1);
+  font-family: 'Raleway', sans-serif;
 }
 
 .app_body{

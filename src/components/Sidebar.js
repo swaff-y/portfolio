@@ -26,17 +26,22 @@ const Sidebar = (props) => {
           <ul>
             <li>
             <Button >
-              Introduction
+              <a href="#/introduction" >Introduction</a>
             </Button>
             </li>
             <li>
             <Button >
-              About Me
+              <a href="#/about" >About Me</a>
             </Button>
             </li>
             <li>
             <Button >
-              Timeline
+              <a href="#/projects" >Projects</a>
+            </Button>
+            </li>
+            <li>
+            <Button >
+              <a href="#/timeline" >Timeline</a>
             </Button>
             </li>
           </ul>
@@ -50,8 +55,8 @@ const Sidebar = (props) => {
             <li>
               <SocialIcon url="https://github.com/swaff-y" />
             </li>
-
           </ul>
+          <p>Some cleaver quote</p>
 
       </div>
     </>
