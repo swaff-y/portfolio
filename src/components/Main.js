@@ -20,8 +20,8 @@ const Main = (props) => {
       <div className="main">
         <Introduction />
         <About />
-        <Projects />
         <Timeline />
+        <Projects />
       </div>
     </>
   )

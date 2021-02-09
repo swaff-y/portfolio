@@ -19,6 +19,7 @@ function App() {
         <Route exact path = "/about" component = {Main} />
         <Route exact path = "/projects" component = {Main} />
         <Route exact path = "/timeline" component = {Main} />
+
       </Router>
     </div>
   );

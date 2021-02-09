@@ -36,12 +36,12 @@ const Sidebar = (props) => {
             </li>
             <li>
             <Button >
-              <a href="#/projects" >Projects</a>
+              <a href="#/timeline" >Timeline</a>
             </Button>
             </li>
             <li>
             <Button >
-              <a href="#/timeline" >Timeline</a>
+              <a href="#/projects" >Projects</a>
             </Button>
             </li>
           </ul>

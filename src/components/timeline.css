@@ -1,4 +1,96 @@
 .timeline{
+  background-image: url("https://res.cloudinary.com/dhl1cdqch/image/upload/v1612861635/bottom_rphunh.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom right;
   width: 80vw;
   height: 100vh;
+  /* border: 1px solid red; */
+}
+
+.timeline__line{
+  position: relative;
+  top: 60px;
+  left: 100px;
+  width: 4px;
+  height: 600px;
+  border: 4px solid rgba(240, 242, 245,1);
+}
+
+.timeline__circle{
+  position: relative;
+  width: 60px;
+  height: 60px;
+  /* border: 2px solid rgba(240, 242, 245,1); */
+  border-radius: 50%;
+}
+
+.one{
+  top: -545px;
+  left: 73px;
+}
+.two{
+  top: -490px;
+  left: 73px;
+}
+.three{
+  top: -440px;
+  left: 73px;
+}
+.four{
+  top: -390px;
+  left: 73px;
+}
+.five{
+  top: -340px;
+  left: 73px;
+}
+.six{
+  top: -298px;
+  left: 73px;
+}
+
+.timeline__story{
+  position: relative;
+  background-color: rgba(240, 242, 245,1);
+  padding: 30px;
+  top: -1150px;
+  left: 350px;
+  width:30vw;
+}
+.timeline__heading{
+  position: relative;
+  top: -1170px;
+  left: 350px;
+  width:40vw;
+}
+
+.timeline__dateOne{
+  position: relative;
+  top: -890px;
+  left: 150px;
+}
+.timeline__dateTwo{
+  position: relative;
+  top: -810px;
+  left: 150px;
+}
+.timeline__dateThree{
+  position: relative;
+  top: -740px;
+  left: 150px;
+}
+.timeline__dateFour{
+  position: relative;
+  top: -670px;
+  left: 150px;
+}
+.timeline__dateFive{
+  position: relative;
+  top: -600px;
+  left: 150px;
+}
+.timeline__dateSix{
+  position: relative;
+  top: -535px;
+  left: 150px;
 }
