@@ -5,3 +5,17 @@
   width: 80vw;
   height: 800px;
 }
+
+.introduction__carousel{
+  position: relative;
+  top: 100px;
+  left:100px;
+}
+
+.introduction__callToAction{
+  border:3px solid rgba(240, 242, 245,1);
+  background-color: rgba(240, 242, 245,1);
+  border-radius: 5px;
+  width: 200px;
+  text-align: center;
+}

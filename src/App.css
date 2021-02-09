@@ -41,7 +41,7 @@
 
 .app{
   display: grid;
-  grid-template-columns: 300px auto;
+  grid-template-columns: auto auto;
   justify-content: start;
   /* place-items: center; */
   /* height: 100vh; */

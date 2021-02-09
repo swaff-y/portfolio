@@ -7,6 +7,10 @@ import "./main.css";
 
 const Main = (props) => {
 
+  const [toggleStyle, setToggleStyle] = useState({
+    flex: 0.65,
+  });
+
   useEffect(()=>{
     let location;
     location = props.location.pathname.substring(1);
@@ -15,9 +19,22 @@ const Main = (props) => {
     }
   },[]);
 
+  useEffect(()=>{
+    if(props.sidebar === true){
+      setToggleStyle({
+        flex: 0.65,
+      })
+    }else if(props.sidebar === false){
+      setToggleStyle({
+        flex: 1,
+        width: '100vw',
+      })
+    }
+  },[props.sidebar])
+
   return(
     <>
-      <div className="main">
+      <div className="main" style={toggleStyle}>
         <Introduction />
         <About />
         <Timeline />

@@ -1,6 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
+import React, {useEffect, useState} from 'react';
 import Sidebar from './components/Sidebar'
+import SkinnySidebar from './components/SkinnySidebar'
 import Main from './components/Main'
 import Introduction from './components/Introduction';
 import About from './components/About';
@@ -10,16 +12,32 @@ import { Route, HashRouter as Router } from 'react-router-dom';
 
 
 function App() {
+  const [sidebar, setSidebar] = useState(true);
+
+  const toggleSidebar = () => {
+    if(sidebar === true){
+      setSidebar(false);
+    }else if(sidebar === false){
+      setSidebar(true);
+    }
+  }
+
   return (
     <div className="app">
-      <Sidebar />
-      <Router>
-        <Route exact path = "/" component = {Main} />
-        <Route exact path = "/introduction" component = {Main} />
-        <Route exact path = "/about" component = {Main} />
-        <Route exact path = "/projects" component = {Main} />
-        <Route exact path = "/timeline" component = {Main} />
 
+      {
+        sidebar === true
+        ?
+        <Sidebar toggleSidebar={toggleSidebar} />
+        :
+        <SkinnySidebar toggleSidebar={toggleSidebar} />
+      }
+      <Router>
+        <Route exact path="/" render={(props) => <Main {...props} sidebar={sidebar} />} />
+        <Route exact path="/introduction" render={(props) => <Main {...props} sidebar={sidebar} />} />
+        <Route exact path="/about" render={(props) => <Main {...props} sidebar={sidebar} />} />
+        <Route exact path="/projects" render={(props) => <Main {...props} sidebar={sidebar} />} />
+        <Route exact path="/timeline" render={(props) => <Main {...props} sidebar={sidebar} />} />
       </Router>
     </div>
   );

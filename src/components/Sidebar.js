@@ -6,11 +6,16 @@ import { SocialIcon } from 'react-social-icons';
 import "./sidebar.css";
 
 const Sidebar = (props) => {
+
+  const handleEmail = () => {
+    window.location.href = "mailto:kyle@swaff.id.au?subject=Lets talk - Kyle Swaffield&body=Good Day, \n\n I found your website and I would like to have a chat with you. ";
+  }
+
   return(
     <>
       <div className="sidebar">
         <div className="sidebar__header">
-          <IconButton >
+          <IconButton onClick={props.toggleSidebar}>
             <Toc />
           </IconButton>
         </div>
@@ -19,7 +24,7 @@ const Sidebar = (props) => {
         <img src={process.env.PUBLIC_URL + '/img/image.png'} alt="Kyle Swaffield" className="sidebar__img" />
 
           <h1>Kyle Swaffield</h1>
-          <Button >
+          <Button onClick={handleEmail} >
             <MailOutline />
             kyle@swaff.id.au
           </Button>
@@ -56,7 +61,7 @@ const Sidebar = (props) => {
               <SocialIcon url="https://github.com/swaff-y" />
             </li>
           </ul>
-          <p>Some cleaver quote</p>
+          <p>&copy; Swaff-y 2021</p>
 
       </div>
     </>

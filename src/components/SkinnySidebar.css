@@ -1,0 +1,5 @@
+.skinnySidebar{
+  display: inline-grid;
+  flex-direction: column;
+  flex: 0.01;
+}
