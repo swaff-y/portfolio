@@ -24,14 +24,14 @@ const Introduction = (props) => {
             <h1><strong>Hi, I'm Kyle</strong></h1>
             <p>A full stack software engineer based in Sydney</p>
             <div className="introduction__callToAction">
-              <a href="https://swaff-y.github.io/portfolio/cv.pdf" download="w3logo">Download my Resume</a>
+              <a href="https://swaff-y.github.io/portfolio/cv.pdf" download="Kyle Swaffield - Full Stack Software Engineer" target="_blank">Download my Resume</a>
             </div>
         </Carousel.Item>
         <Carousel.Item interval={5000}>
             <h1>I love building things</h1>
             <p>Why not check out some of my work?</p>
             <div className="introduction__callToAction">
-              View my Projects
+              <a href="#/projects" >View my Projects</a>
             </div>
         </Carousel.Item>
       </Carousel>
