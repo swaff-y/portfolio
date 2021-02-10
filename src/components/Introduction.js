@@ -9,10 +9,8 @@ const Introduction = (props) => {
   const handleCVClick = () => {
     if(slide === true){
       setSlide(false);
-      console.log("Project", slide);
     }else if(slide === false){
       setSlide(true);
-      console.log("CV", slide);
     }
   }
 

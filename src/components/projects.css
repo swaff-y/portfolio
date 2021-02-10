@@ -21,3 +21,6 @@
   top: -1480px;
   width: 200px;
 }
+.projects__click:hover{
+  cursor: pointer;
+}

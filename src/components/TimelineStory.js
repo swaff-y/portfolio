@@ -86,24 +86,9 @@ const TimelineStory = (props) => {
     <h3>General Manager</h3>
     <p>Sprag Components (Aug 2012 - Jun 2017)</p>
     <p>
-      I was put in charge of supervising lower-level managers. These lower-level managers were in turn in charge of several smaller divisions. These divisions included; sales, marketing, accounts, procurement, workshop management, and human resources. This duty was to give specific direction for each department head. As part of this supervision, additional roles included hiring, training, coaching and disciplining lower-level managers. I was also involved with setting incentives for workers, appraising the efficiency of departments and creating strategic plans for the business based on company goals.
+      As the company's General Manager, I was responsible for supervising lower-level managers. These divisions included; sales, marketing, accounts, procurement, workshop management, and human resources. As part of this role, additional duties included hiring, training, coaching and disciplining lower-level managers. I was also involved with setting incentives for workers, appraising the efficiency of departments and creating strategic plans for the business based on company goals.
     </p>
   </div>
-
-
-  // if(props.one === true){
-  //   setText(ga);
-  // }else if(props.two === true ){
-  //   setText(pp);
-  // }else if(props.three === true ){
-  //   setText(cim);
-  // }else if(props.four === true ){
-  //   setText(pmr);
-  // }else if(props.five === true ){
-  //   setText(pmb);
-  // }else if(props.six === true ){
-  //   setText(gm);
-  // }
 
   return(
     <div className="timeline__story">
