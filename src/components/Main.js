@@ -35,7 +35,7 @@ const Main = (props) => {
   return(
     <>
       <div className="main" style={toggleStyle}>
-        <Introduction />
+        <Introduction windowWidth={props.windowWidth}/>
         <About />
         <Timeline />
         <Projects />

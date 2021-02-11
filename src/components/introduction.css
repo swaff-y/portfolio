@@ -2,14 +2,13 @@
   background-image: url("https://res.cloudinary.com/dhl1cdqch/image/upload/v1612754298/Back_no06u6.jpg");
   background-repeat: no-repeat;
   background-position: right;
-  width: 80vw;
   height: 800px;
 }
 
 .introduction__carousel{
   position: relative;
   top: 100px;
-  left:100px;
+
 }
 
 .introduction__callToAction{

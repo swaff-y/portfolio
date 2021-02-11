@@ -5,6 +5,25 @@ import "./introduction.css";
 
 const Introduction = (props) => {
   const [slide,setSlide] = useState(true);
+  const [windowWidth,setWindowWidth] = useState('80vw');
+  const [caroselPosition,setCaroselPosition] = useState('100px');
+  const [caroselWidth,setCaroselWidth] = useState('200px');
+  // console.log("window Width:", props.windowWidth );
+  useEffect(()=>{
+    if(props.windowWidth < 1090){
+      setWindowWidth('100vw');
+    }else if(props.windowWidth >= 1090){
+      setWindowWidth('80vw');
+    }
+    if(props.windowWidth > 800){
+      setCaroselPosition('100px');
+      setCaroselWidth('400px');
+    }else if(props.windowWidth <= 800){
+      setCaroselPosition('30px');
+      setCaroselWidth('280px');
+    }
+  },[props.windowWidth])
+
 
   const handleCVClick = () => {
     if(slide === true){
@@ -13,11 +32,11 @@ const Introduction = (props) => {
       setSlide(true);
     }
   }
-
+    // console.log(carosel);
   return(
-    <div className="introduction" id="introduction">
+    <div className="introduction" id="introduction" style={{width: windowWidth}}>
 
-      <Carousel className="introduction__carousel" controls={false} indicators={false} onSlide={handleCVClick}>
+      <Carousel className="introduction__carousel" controls={false} indicators={false} onSlide={handleCVClick} style={{left: caroselPosition, width: caroselWidth}}>
         <Carousel.Item interval={5000}>
             <h1><strong>Hi, I'm Kyle</strong></h1>
             <p>A full stack software engineer based in Sydney</p>
