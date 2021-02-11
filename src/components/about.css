@@ -9,10 +9,10 @@
 
 .about__paragraph{
   position: relative;
-  width: 50vw;
+  width: 55vw;
   height: 35vh;
   margin: 50px;
-  overflow: scroll;
+  /* overflow: scroll; */
 }
 .about__tech{
   position: relative;
