@@ -11,11 +11,34 @@ const Sidebar = (props) => {
     window.location.href = "mailto:kyle@swaff.id.au?subject=Lets talk - Kyle Swaffield&body=Good Day, \n\n I found your website and I would like to have a chat with you. ";
   }
 
+  const handleClick = () => {
+    if(props.windowWidth < 600 ){
+      props.toggleSidebar();
+      if(props.sidebar === true){
+        props.turnMainOff(false);
+      }else if(props.sidebar === false){
+        props.turnMainOff(true);
+      }
+    }
+  }
+  const handleSideClick = () => {
+    if(props.windowWidth > 600 ){
+      props.toggleSidebar();
+    }else{
+      props.toggleSidebar();
+      if(props.sidebar === true){
+        props.turnMainOff(false);
+      }else if(props.sidebar === false){
+        props.turnMainOff(true);
+      }
+    }
+  }
+
   return(
     <>
       <div className="sidebar">
         <div className="sidebar__header">
-          <IconButton onClick={props.toggleSidebar}>
+          <IconButton onClick={handleSideClick}>
             <Toc />
           </IconButton>
         </div>
@@ -30,22 +53,22 @@ const Sidebar = (props) => {
           </Button>
           <ul>
             <li>
-            <Button >
+            <Button onClick={handleClick}>
               <a href="#/introduction" >Introduction</a>
             </Button>
             </li>
             <li>
-            <Button >
+            <Button onClick={handleClick}>
               <a href="#/about" >About Me</a>
             </Button>
             </li>
             <li>
-            <Button >
+            <Button onClick={handleClick}>
               <a href="#/timeline" >Timeline</a>
             </Button>
             </li>
             <li>
-            <Button >
+            <Button onClick={handleClick}>
               <a href="#/projects" >Projects</a>
             </Button>
             </li>
