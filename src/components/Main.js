@@ -38,7 +38,7 @@ const Main = (props) => {
         <Introduction windowWidth={props.windowWidth}/>
         <About />
         <Timeline />
-        <Projects />
+        <Projects  windowWidth={props.windowWidth}/>
       </div>
     </>
   )

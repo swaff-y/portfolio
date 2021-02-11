@@ -4,6 +4,36 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import "./projects.css"
 
 const Projects = (props) => {
+  const [heading, setHeading] = useState({});
+  const [offsetLeft, setOffsetLeft] = useState({offset: 4});
+  const [offsetRight, setOffsetRight] = useState({offset: 1});
+  const [row, setRow] = useState(4);
+
+  useEffect(()=>{
+    if(props.windowWidth < 1195){
+      const heading = {
+        display: 'none',
+      };
+      setHeading(heading);
+    }else if(props.windowWidth > 1195){
+      const heading = {
+        position: 'relative',
+        marginLeft: '20px',
+        top: '-1480px',
+        width: '200px',
+      };
+      setHeading(heading);
+    }
+    if(props.windowWidth < 1075){
+      setOffsetLeft({});
+      setOffsetRight({});
+      setRow(0);
+    }else if(props.windowWidth > 1075){
+      setOffsetLeft({offset: 4});
+      setOffsetRight({offset: 1});
+      setRow(4);
+    }
+  },[props.windowWidth])
 
   const cardStyleTop = {
     width: '18rem',
@@ -36,8 +66,8 @@ const Projects = (props) => {
   return(
     <div className="projects" id="projects">
       <Container>
-        <Row md={4} className="projects__firstRow">
-          <Col md={{offset: 3}}>
+        <Row md={row} className="projects__firstRow">
+          <Col md={offsetLeft}>
             <Card style={cardStyleTop} >
               <Card.Img variant="top" src="https://res.cloudinary.com/dhl1cdqch/image/upload/v1612785394/TicTac_haxsiw.jpg" onClick={handleTicTacToe} className="projects__click"/>
               <Card.Body onClick={handleTicTacToe} className="projects__click">
@@ -58,7 +88,7 @@ const Projects = (props) => {
               </Card.Body>
             </Card>
           </Col>
-          <Col md={{offset: 1}}>
+          <Col md={offsetRight}>
             <Card style={cardStyleTop} >
               <Card.Img variant="top" src="https://res.cloudinary.com/dhl1cdqch/image/upload/v1612785417/burnAirlines_sees6p.jpg" onClick={handleBurnt} className="projects__click"/>
               <Card.Body onClick={handleBurnt} className="projects__click">
@@ -152,7 +182,7 @@ const Projects = (props) => {
           </Col>
         </Row>
       </Container>
-      <h1 className="projects__heading">Some of My Projects</h1>
+      <h1 className="projects__heading" style={heading}>Some of My Projects</h1>
     </div>
   )
 }
