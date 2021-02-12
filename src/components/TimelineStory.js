@@ -42,7 +42,6 @@ const TimelineStory = (props) => {
       <li>3 Month Full-Time Software Engineering Immersive "Bootcamp"</li>
       <li>The course covers full-stack front-end and back-end development</li>
     </ul>
-    <p>This is where I was able to sink my teeth into Software Engineering. </p>
   </div>
   const pp =
   <div>
@@ -51,7 +50,6 @@ const TimelineStory = (props) => {
     <ul>
       <li>Project manager for the development and launch of Pinnace Pumps eCommerce website</li>
     </ul>
-    <p>This is where I was able to sink my teeth into Software Engineering. </p>
   </div>
   const cim =
   <div>
@@ -60,7 +58,6 @@ const TimelineStory = (props) => {
     <ul>
       <li>I oversaw daily operations (IT systems - mainly SAP, business analysis, company associations, and employee activities) to promote consistency of service among divisions.</li>
     </ul>
-    <p>This is where I was able to sink my teeth into Software Engineering. </p>
   </div>
   const pmr =
   <div>
@@ -69,7 +66,6 @@ const TimelineStory = (props) => {
     <ul>
       <li>RINGSPANN needed to implement SAP as part of their global strategy to integrate all subsidiaries worldwide on one central ERP system.</li>
     </ul>
-    <p>This is where I was able to sink my teeth into Software Engineering. </p>
   </div>
   const pmb =
   <div>
@@ -79,19 +75,18 @@ const TimelineStory = (props) => {
       <li>As part of a strategic decision, I managed the project to start, develop and run a sister company, Bearings Online.</li>
       <li>The project was an online marketing approach to selling power transmission products via an eCommerce platform.</li>
     </ul>
-    <p>This is where I was able to sink my teeth into Software Engineering. </p>
   </div>
   const gm =
   <div>
     <h3>General Manager</h3>
     <p>Sprag Components (Aug 2012 - Jun 2017)</p>
     <p>
-      As the company's General Manager, I was responsible for supervising lower-level managers. These divisions included; sales, marketing, accounts, procurement, workshop management, and human resources. As part of this role, additional duties included hiring, training, coaching and disciplining lower-level managers. I was also involved with setting incentives for workers, appraising the efficiency of departments and creating strategic plans for the business based on company goals.
+      I was responsible for supervising lower-level managers. These divisions included; sales, marketing, accounts, procurement, workshop management, and human resources. Duties included hiring, training, coaching and disciplining lower-level managers. I was also involved with appraising the efficiency of departments and creating strategic plans for the business.
     </p>
   </div>
 
   return(
-    <div className="timeline__story">
+    <div className="timeline__story" style={props.storyStyle}>
       { text }
     </div>
   )

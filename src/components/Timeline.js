@@ -10,6 +10,69 @@ const Timeline = (props) => {
   const [four,setFour] = useState(false);
   const [five,setFive] = useState(false);
   const [six,setSix] = useState(false);
+  const [windowWidth,setWindowWidth] = useState('80vw');
+  const [timeLine,setTimeLine] = useState('100px');
+  const [timeCircle,setTimeCircle] = useState('73px');
+  const [dateDisplay,setDateDisplay] = useState('');
+  const [headingDisplay,setHeadingDisplay] = useState({
+    position: 'relative',
+    top: '-1170px',
+    left: '350px',
+    width: '40vw'
+  });
+  const [storyDisplay,setStoryDisplay] = useState({
+    position: 'relative',
+    backgroundColor: 'rgba(240, 242, 245,1)',
+    padding: '30px',
+    top: '-1150px',
+    left: '350px',
+    width: '30vw'
+  });
+
+  useEffect(()=>{
+    if(props.windowWidth < 1090){
+      setWindowWidth('100vw');
+    }else if(props.windowWidth >= 1090){
+      setWindowWidth('80vw');
+    }
+    if(props.windowWidth < 600){
+      setTimeLine('30px');
+      setTimeCircle('5px')
+      setDateDisplay('none');
+      setHeadingDisplay({
+        position: 'relative',
+        top: '-1000px',
+        left: '10px',
+        width: '80vw'
+      });
+      setStoryDisplay({
+        position: 'relative',
+        backgroundColor: 'rgba(240, 242, 245,1)',
+        padding: '30px',
+        top: '-960px',
+        left: '80px',
+        width: '65vw'
+      });
+    }else if(props.windowWidth >= 600){
+      setTimeLine('100px');
+      setTimeCircle('73px')
+      setDateDisplay('');
+      setHeadingDisplay({
+        position: 'relative',
+        top: '-1170px',
+        left: '350px',
+        width: '40vw'
+      });
+      setStoryDisplay({
+        position: 'relative',
+        backgroundColor: 'rgba(240, 242, 245,1)',
+        padding: '30px',
+        top: '-1150px',
+        left: '350px',
+        width: '30vw'
+      });
+    }
+  },[props.windowWidth])
 
   const style = {
     fontSize:62,
@@ -66,28 +129,28 @@ const Timeline = (props) => {
   }
 
   return(
-    <div className="timeline" id="timeline">
-      <div className="timeline__line">
+    <div className="timeline" id="timeline" style={{width: windowWidth}}>
+      <div className="timeline__line" style={{left:timeLine}}>
       </div>
-      <div className="timeline__circle one" onClick={toggleOne}>
+      <div className="timeline__circle one" onClick={toggleOne} style={{left: timeCircle}}>
         <WatchLaterIcon style={style}/>
       </div>
-      <div className="timeline__circle two" onClick={toggleTwo}>
+      <div className="timeline__circle two" onClick={toggleTwo} style={{left: timeCircle}}>
         <WatchLaterIcon style={style}/>
       </div>
-      <div className="timeline__circle three" onClick={toggleThree}>
+      <div className="timeline__circle three" onClick={toggleThree} style={{left: timeCircle}}>
         <WatchLaterIcon style={style}/>
       </div>
-      <div className="timeline__circle four" onClick={toggleFour}>
+      <div className="timeline__circle four" onClick={toggleFour} style={{left: timeCircle}}>
         <WatchLaterIcon style={style}/>
       </div>
-      <div className="timeline__circle five" onClick={toggleFive}>
+      <div className="timeline__circle five" onClick={toggleFive} style={{left: timeCircle}}>
         <WatchLaterIcon style={style}/>
       </div>
-      <div className="timeline__circle six" onClick={toggleSix}>
+      <div className="timeline__circle six" onClick={toggleSix} style={{left: timeCircle}}>
         <WatchLaterIcon style={style}/>
       </div>
-      <div className="timeline__dateOne">
+      <div className="timeline__dateOne" style={{display: dateDisplay}}>
         {
           one === true
           ?
@@ -96,7 +159,7 @@ const Timeline = (props) => {
           <p onClick={toggleOne}>Nov 2020 - Jan 2021</p>
         }
       </div>
-      <div className="timeline__dateTwo">
+      <div className="timeline__dateTwo" style={{display: dateDisplay}}>
       {
         two === true
         ?
@@ -105,7 +168,7 @@ const Timeline = (props) => {
         <p onClick={toggleTwo}>Oct 2019 - Feb 2020</p>
       }
       </div>
-      <div className="timeline__dateThree">
+      <div className="timeline__dateThree" style={{display: dateDisplay}}>
       {
         three === true
         ?
@@ -114,7 +177,7 @@ const Timeline = (props) => {
         <p onClick={toggleThree}>Jan 2019 - Feb 2020</p>
       }
       </div>
-      <div className="timeline__dateFour">
+      <div className="timeline__dateFour" style={{display: dateDisplay}}>
       {
         four === true
         ?
@@ -123,7 +186,7 @@ const Timeline = (props) => {
         <p onClick={toggleFour}>Jan 2018 - Dec 2019</p>
       }
       </div>
-      <div className="timeline__dateFive">
+      <div className="timeline__dateFive" style={{display: dateDisplay}}>
       {
         five === true
         ?
@@ -132,7 +195,7 @@ const Timeline = (props) => {
         <p onClick={toggleFive}>Jul 2015 - Sep 2016</p>
       }
       </div>
-      <div className="timeline__dateSix">
+      <div className="timeline__dateSix" style={{display: dateDisplay}}>
       {
         six === true
         ?
@@ -141,8 +204,8 @@ const Timeline = (props) => {
         <p onClick={toggleSix}>Aug 2012 - Jun 2017</p>
       }
       </div>
-        <h1 className="timeline__heading">My work history</h1>
-        <TimelineStory one={one} two={two} three={three} four={four} five={five} six={six}/>
+        <h1 className="timeline__heading" style={headingDisplay}>My work history</h1>
+        <TimelineStory one={one} two={two} three={three} four={four} five={five} six={six} storyStyle={storyDisplay}/>
     </div>
   )
 }
