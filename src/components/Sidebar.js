@@ -84,7 +84,7 @@ const Sidebar = (props) => {
               <SocialIcon url="https://github.com/swaff-y" />
             </li>
           </ul>
-          <p>&copy; Swaff-y 2021</p>
+          <p>&copy; Swaff-y 2021 - Built in React</p>
 
       </div>
     </>
