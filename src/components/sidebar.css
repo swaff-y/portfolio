@@ -4,7 +4,7 @@
   flex: 0.35;
   background-color: rgba(240, 242, 245,1);
   justify-content: space-between;
-  padding: 20px;
+  padding: 0px 20px 20px 20px;
   /* padding-left: 40px; */
   /* border: 1px solid red; */
   text-align: center;
@@ -27,16 +27,17 @@ ul,li{
 
 .sidebar__header{
   /* display: flex; */
-  text-align: right;
+  text-align: left;
   /* justify-content: space-between; */
   /* min-width: 10vw; */
 }
 
 .sidebar__social{
-  margin-bottom: 20px;
+  margin-top: -10px;
+  margin-bottom: 10px;
 }
 .sidebar__social > li{
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
 /* .sidebar__header > .MuiSvgIcon-root {
