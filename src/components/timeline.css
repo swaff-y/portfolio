@@ -3,8 +3,13 @@
   background-repeat: no-repeat;
   background-position: bottom right;
   width: 80vw;
-  height: 100vh;
+  height: 120vh;
   /* border: 1px solid red; */
+}
+
+.clock:hover{
+  cursor: pointer;
+  transform: scale(1.2, 1.2);
 }
 
 .timeline__line{
@@ -65,26 +70,26 @@
 }
 .timeline__dateTwo{
   position: relative;
-  top: -810px;
+  top: -830px;
   left: 150px;
 }
 .timeline__dateThree{
   position: relative;
-  top: -740px;
+  top: -770px;
   left: 150px;
 }
 .timeline__dateFour{
   position: relative;
-  top: -670px;
+  top: -712px;
   left: 150px;
 }
 .timeline__dateFive{
   position: relative;
-  top: -600px;
+  top: -650px;
   left: 150px;
 }
 .timeline__dateSix{
   position: relative;
-  top: -535px;
+  top: -600px;
   left: 150px;
 }

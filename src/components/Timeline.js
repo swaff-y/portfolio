@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import WatchLaterIcon from '@material-ui/icons/WatchLater';
 import TimelineStory from './TimelineStory';
+import {Button} from '@material-ui/core';
 import "./timeline.css"
 
 const Timeline = (props) => {
@@ -133,76 +134,78 @@ const Timeline = (props) => {
       <div className="timeline__line" style={{left:timeLine}}>
       </div>
       <div className="timeline__circle one" onClick={toggleOne} style={{left: timeCircle}}>
-        <WatchLaterIcon style={style}/>
+        <WatchLaterIcon style={style} className="clock"/>
       </div>
       <div className="timeline__circle two" onClick={toggleTwo} style={{left: timeCircle}}>
-        <WatchLaterIcon style={style}/>
+        <WatchLaterIcon style={style} className="clock"/>
       </div>
       <div className="timeline__circle three" onClick={toggleThree} style={{left: timeCircle}}>
-        <WatchLaterIcon style={style}/>
+        <WatchLaterIcon style={style} className="clock"/>
       </div>
       <div className="timeline__circle four" onClick={toggleFour} style={{left: timeCircle}}>
-        <WatchLaterIcon style={style}/>
+        <WatchLaterIcon style={style} className="clock"/>
       </div>
       <div className="timeline__circle five" onClick={toggleFive} style={{left: timeCircle}}>
-        <WatchLaterIcon style={style}/>
+        <WatchLaterIcon style={style} className="clock"/>
       </div>
       <div className="timeline__circle six" onClick={toggleSix} style={{left: timeCircle}}>
-        <WatchLaterIcon style={style}/>
+        <WatchLaterIcon style={style} className="clock"/>
       </div>
       <div className="timeline__dateOne" style={{display: dateDisplay}}>
         {
           one === true
           ?
-          <p onClick={toggleOne}><strong>Nov 2020 - Jan 2021</strong></p>
+          <p onClick={toggleOne}><Button><strong>Nov 2020 - Jan 2021</strong></Button></p>
           :
-          <p onClick={toggleOne}>Nov 2020 - Jan 2021</p>
+          <p onClick={toggleOne}><Button>Nov 2020 - Jan 2021</Button></p>
         }
       </div>
       <div className="timeline__dateTwo" style={{display: dateDisplay}}>
       {
         two === true
         ?
-        <p onClick={toggleTwo}><strong>Oct 2019 - Feb 2020</strong></p>
+        <p onClick={toggleTwo}><Button><strong>Oct 2019 - Feb 2020</strong></Button></p>
         :
-        <p onClick={toggleTwo}>Oct 2019 - Feb 2020</p>
+        <p onClick={toggleTwo}><Button>Oct 2019 - Feb 2020</Button></p>
       }
       </div>
       <div className="timeline__dateThree" style={{display: dateDisplay}}>
       {
         three === true
         ?
-        <p onClick={toggleThree}><strong>Jan 2019 - Feb 2020</strong></p>
+        <p onClick={toggleThree}><Button><strong>Jan 2019 - Feb 2020</strong></Button></p>
         :
-        <p onClick={toggleThree}>Jan 2019 - Feb 2020</p>
+        <p onClick={toggleThree}><Button>Jan 2019 - Feb 2020</Button></p>
       }
       </div>
       <div className="timeline__dateFour" style={{display: dateDisplay}}>
       {
         four === true
         ?
-        <p onClick={toggleFour}><strong>Jan 2018 - Dec 2019</strong></p>
+        <p onClick={toggleFour}><Button><strong>Jan 2018 - Dec 2019</strong></Button></p>
         :
-        <p onClick={toggleFour}>Jan 2018 - Dec 2019</p>
+        <p onClick={toggleFour}><Button>Jan 2018 - Dec 2019</Button></p>
       }
       </div>
       <div className="timeline__dateFive" style={{display: dateDisplay}}>
       {
         five === true
         ?
-        <p onClick={toggleFive}><strong>Jul 2015 - Sep 2016</strong></p>
+        <p onClick={toggleFive}><Button><strong>Jul 2015 - Sep 2016</strong></Button></p>
         :
-        <p onClick={toggleFive}>Jul 2015 - Sep 2016</p>
+        <p onClick={toggleFive}><Button>Jul 2015 - Sep 2016</Button></p>
       }
       </div>
       <div className="timeline__dateSix" style={{display: dateDisplay}}>
+
       {
         six === true
         ?
-        <p onClick={toggleSix}><strong>Aug 2012 - Jun 2017</strong></p>
+        <p onClick={toggleSix}><Button><strong>Aug 2012 - Jun 2017</strong></Button></p>
         :
-        <p onClick={toggleSix}>Aug 2012 - Jun 2017</p>
+        <p onClick={toggleSix}><Button>Aug 2012 - Jun 2017</Button></p>
       }
+
       </div>
         <h1 className="timeline__heading" style={headingDisplay}>My work history</h1>
         <TimelineStory one={one} two={two} three={three} four={four} five={five} six={six} storyStyle={storyDisplay}/>
