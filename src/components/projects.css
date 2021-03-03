@@ -4,6 +4,11 @@
   height: 1900px;
 }
 
+.projects__card:hover{
+  cursor: pointer;
+  transform: scale(1.05, 1.05);
+}
+
 .projects__firstRow{
   background-image: url("https://res.cloudinary.com/dhl1cdqch/image/upload/v1612777869/circuit_vlayw3.jpg");
   background-repeat: no-repeat;

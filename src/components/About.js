@@ -31,8 +31,10 @@ const About = (props) => {
   return(
     <div className="about" id="about" style={{width: windowWidth, height: windowHeight}}>
       <div className="about__paragraph">
-        <h1>Who am I?</h1>
-        <p>I have a strong passion for software engineering, and a great deal of experience in project management. I enjoy the results of what can be achieved when thinking about software development problems collectively. My aptitude for analysing code based problems, helps me think about solutions from a unique perspective. As a collaborative and communicative team member, I help build operational teams while cultivating meaningful relationships.</p>
+        <article>
+          <h1>Who am I?</h1>
+          <p>I have a strong passion for software engineering, and a great deal of experience in project management. I enjoy the results of what can be achieved when thinking about software development problems collectively. My aptitude for analysing code based problems, helps me think about solutions from a unique perspective. As a collaborative and communicative team member, I help build operational teams while cultivating meaningful relationships.</p>
+        </article>
       </div>
       <div className="about__tech" style={{top: techPosition}}>
         <h1>Technologies I use</h1>

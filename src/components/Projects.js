@@ -68,7 +68,7 @@ const Projects = (props) => {
       <Container>
         <Row md={row} className="projects__firstRow">
           <Col md={offsetLeft}>
-            <Card style={cardStyleTop} >
+            <Card style={cardStyleTop} className="projects__card">
               <Card.Img variant="top" src="https://res.cloudinary.com/dhl1cdqch/image/upload/v1612785394/TicTac_haxsiw.jpg" onClick={handleTicTacToe} className="projects__click"/>
               <Card.Body onClick={handleTicTacToe} className="projects__click">
                 <Card.Title><strong>Tic-Tac-Toe</strong></Card.Title>
@@ -89,7 +89,7 @@ const Projects = (props) => {
             </Card>
           </Col>
           <Col md={offsetRight}>
-            <Card style={cardStyleTop} >
+            <Card style={cardStyleTop} className="projects__card">
               <Card.Img variant="top" src="https://res.cloudinary.com/dhl1cdqch/image/upload/v1612785417/burnAirlines_sees6p.jpg" onClick={handleBurnt} className="projects__click"/>
               <Card.Body onClick={handleBurnt} className="projects__click">
                 <Card.Title><strong>Burning Airlines</strong></Card.Title>
@@ -112,7 +112,7 @@ const Projects = (props) => {
         </Row>
         <Row className="projects__secondRow">
           <Col>
-            <Card style={cardStyle}>
+            <Card style={cardStyle} className="projects__card">
               <Card.Img variant="top" src="https://res.cloudinary.com/dhl1cdqch/image/upload/v1612785397/rentHelp_pjflqj.jpg" onClick={handleRent} className="projects__click"/>
               <Card.Body onClick={handleRent} className="projects__click">
                 <Card.Title><strong>Rent-Help</strong></Card.Title>
@@ -134,7 +134,7 @@ const Projects = (props) => {
             </Card>
           </Col>
           <Col>
-            <Card style={cardStyle}>
+            <Card style={cardStyle} className="projects__card">
               <Card.Img variant="top" src="https://res.cloudinary.com/dhl1cdqch/image/upload/v1612785401/AirCnB_xidwfy.jpg" onClick={handleACNB} className="projects__click"/>
               <Card.Body onClick={handleACNB} className="projects__click">
                 <Card.Title><strong>AirCnB</strong></Card.Title>
@@ -157,7 +157,7 @@ const Projects = (props) => {
             </Card>
           </Col>
           <Col>
-            <Card style={cardStyle}>
+            <Card style={cardStyle} className="projects__card">
               <Card.Img variant="top" src="https://res.cloudinary.com/dhl1cdqch/image/upload/v1612785788/Screen_Shot_2021-02-08_at_11.02.57_pm_chjazt.png" onClick={handleMapChat} className="projects__click"/>
               <Card.Body onClick={handleMapChat} className="projects__click">
                 <Card.Title><strong>mapChat</strong></Card.Title>

@@ -51,37 +51,39 @@ const Sidebar = (props) => {
             <MailOutline />
             kyle@swaff.id.au
           </Button>
-          <ul>
-            <li>
-            <Button onClick={handleClick}>
-              <a href="#/introduction" >Introduction</a>
-            </Button>
-            </li>
-            <li>
-            <Button onClick={handleClick}>
-              <a href="#/about" >About Me</a>
-            </Button>
-            </li>
-            <li>
-            <Button onClick={handleClick}>
-              <a href="#/timeline" >Timeline</a>
-            </Button>
-            </li>
-            <li>
-            <Button onClick={handleClick}>
-              <a href="#/projects" >Projects</a>
-            </Button>
-            </li>
-          </ul>
+          <nav>
+            <ul>
+              <li>
+              <Button onClick={handleClick}>
+                <a href="#/introduction" >Introduction</a>
+              </Button>
+              </li>
+              <li>
+              <Button onClick={handleClick}>
+                <a href="#/about" >About Me</a>
+              </Button>
+              </li>
+              <li>
+              <Button onClick={handleClick}>
+                <a href="#/timeline" >Timeline</a>
+              </Button>
+              </li>
+              <li>
+              <Button onClick={handleClick}>
+                <a href="#/projects" >Projects</a>
+              </Button>
+              </li>
+            </ul>
+          </nav>
           <ul className="sidebar__social">
             <li>
-              <SocialIcon url="https://www.linkedin.com/in/kyle-swaffield/" />
+              <SocialIcon url="https://www.linkedin.com/in/kyle-swaffield/" className="social" />
             </li>
             <li>
-              <SocialIcon url="https://twitter.com/KyleSwaffield" />
+              <SocialIcon url="https://twitter.com/KyleSwaffield" className="social" />
             </li>
             <li>
-              <SocialIcon url="https://github.com/swaff-y" />
+              <SocialIcon url="https://github.com/swaff-y" className="social" />
             </li>
           </ul>
           <p>&copy; Swaff-y 2021 - Built in React</p>
